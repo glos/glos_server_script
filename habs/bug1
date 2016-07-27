@@ -1,0 +1,27 @@
+Platform={
+    id="45029",
+    title="Holland Buoy",
+    lon=-86.27,
+    lat=42.90,
+    summary="The Holland buoy is part of a pilot program to deploy weather buoys closer to shore to improve weather forecast, alert boaters and swimmer of hazardous conditions, and protect drinking water supplies. The organizations involved in bringing the buoy to Holland for the 2012 season include the Holland Board of Public Works (BPW), Holland Area Convention and Visitors Bureau, Louis Padnos Iron and Metal, and LimnoTech",
+    keywords="GLOS,LimnoTech,Holland Buoy, Lake Michigan",
+    sensors={
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="platform/45029/45029_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+

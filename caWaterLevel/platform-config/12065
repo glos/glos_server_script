@@ -1,0 +1,24 @@
+Platform={
+    id="12065",
+    title="Kingsville",
+    lon=-82.734722,
+    lat=42.026667,
+    summary="Tidal Observation at Kingsville, Chart Datum is 183.200 metres above IGLD 1985, For Real Time Water Levels Call 519-733-4417",
+    keywords="Fisheries and Oceans Canada, Great Lakes, Lake Erie, GLOS",
+    sensors={
+	sea_surface_height={
+	    standard_name="sea_surface_height",
+	    long_name="Sea Surface Height",
+	    habs_name="Water Level",
+	    featureType="timeSeries",
+	    units="m",
+	    source="platform/12065/12065_water_level_monthly",
+	    keywords="EARTH SCIENCE > OCEANS > SEA SURFACE TOPOGRAPHY  > SEA SURFACE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			return true
+		      end
+	}
+    }
+}
+

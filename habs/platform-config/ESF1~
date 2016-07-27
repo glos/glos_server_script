@@ -1,0 +1,146 @@
+Platform={
+    id="ESF1",
+    title="Oswego Buoy, Lake Ontario",
+    lon=-76.52,
+    lat=43.49,
+    summary="S2Yachts, TIDAS 900 buoy. Great Lakes Research Consortium and the State University of New York, College of Environmental Science and Forestry",
+    keywords="GLOS,ESF1,Great Lakes Research Consortium and the State University of New York, College of Environmental Science and Forestry,Lake Ontario",
+    sensors={
+	air_pressure={
+	    standard_name="air_pressure",
+	    long_name="air_pressure",
+	    featureType="timeSeries",
+	    units="Pa",
+	    source="platform/ESF1/ESF1_air_press",
+	    depth=-2.44,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC PRESSURE > SEA LEVEL PRESSURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>0 or val<1500 then
+			      return true
+			  else
+			      return false
+			  end			
+		      end
+	},
+	air_temperature={
+	    standard_name="air_temperature",
+	    long_name="air_temperature",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/ESF1/ESF1_air_temp",
+	    depth=-2.44,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > AIR TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-100 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	relative_humidity={
+	    standard_name="relative_humidity",
+	    long_name="dew_point_temperature",
+	    featureType="timeSeries",
+	    units="1",
+	    source="platform/ESF1/ESF1_relative_humidity",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC WATER VAPOR > HUMIDITY",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>1 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="platform/ESF1/ESF1_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_wave_significant_height={
+	    standard_name="sea_surface_wave_significant_height",
+	    long_name="sea_surface_wave_significant_height",
+	    featureType="timeSeries",
+	    units="m",
+	    depth=0.0,
+	    source="platform/ESF1/ESF1_wave_height",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WAVES > SIGNIFICANT WAVE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_wind_wave_period={
+	    standard_name="sea_surface_wind_wave_period",
+	    long_name="sea_surface_wind_wave_period",
+	    featureType="timeSeries",
+	    units="s",
+	    depth=-2.74,
+	    source="platform/ESF1/ESF1_wave_period",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WAVES > WAVE FREQUENCY",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_from_direction={
+	    standard_name="wind_from_direction",
+	    long_name="wind_from_direction",
+	    featureType="timeSeries",
+	    units="degree",
+	    source="platform/ESF1/ESF1_wind_direction",
+	    depth=-2.74,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>360 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_speed={
+	    standard_name="wind_speed",
+	    long_name="wind_speed",
+	    featureType="timeSeries",
+	    units="m s-1",
+	    source="platform/ESF1/ESF1_wind_speed",
+	    depth=-2.74,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+

@@ -1,0 +1,27 @@
+Platform={
+    id="45014",
+    title="GB17",
+    lon=-87.76,
+    lat=44.8,
+    summary="The GB17 buoy is located approximately 40 km northeast of the mouth of the Fox River at the southern end of Green Bay. The CB-1500 coastal data buoy is secured by a two-point mooring system over a mud substrate in 13 meters of water. All equipment is solar powered and monitors physical, ecological, and meteorological parameters. Data is collected every 30 minutes using a cellular modem, allowing near real-time data collection and water quality monitoring.",
+    keywords="GLOS,University of Wisconsin-Milwaukee,MTU Buoy, Lake Michigan, Green Bay",
+    sensors={
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="/home/gwang/Codes/lua1/platform/45014/45014_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+

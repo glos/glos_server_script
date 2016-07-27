@@ -1,0 +1,27 @@
+Platform={
+    id="MTRI-SKW",
+    title="South Keeweenaw Waterway thermistor",
+    lon=-88.433346,
+    lat=46.977925,
+    summary="",
+    keywords="GLOS,MTRI,Michigan Technological University: Research Institute",
+    sensors={
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="extra/data/mtri-skw_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+

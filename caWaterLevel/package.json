@@ -1,0 +1,32 @@
+{
+  "name": "caWaterLevel",
+  "version": "0.0.1",
+  "description": "Parsing Canadian hourly observed water Level data from its web site",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hellocomrade",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreatLakesCommission/GLOS_Scripts"
+  },
+  "keywords": [
+    "Water",
+    "Level",
+    "Canadian",
+    "Great",
+    "Lakes",
+    "GLOS"
+  ],
+  "bugs": {
+    "url": "https://github.com/GreatLakesCommission/GLOS_Scripts/issues"
+  },
+  "dependencies": {
+    "request": "^2.69.0",
+    "cheerio": "^0.20.0",
+    "yamljs": "^0.2.5",
+    "fs": "^0.0.2"
+  }
+}

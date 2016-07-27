@@ -1,0 +1,24 @@
+Platform={
+    id="14940",
+    title="Summerstown",
+    lon=-74.554167,
+    lat=45.059722,
+    summary="Tidal Observation at Summerstown, Chart Datum is 183.200 metres above IGLD 1985, For Real Time Water Levels Call 613-931-2089",
+    keywords="Fisheries and Oceans Canada, Great Lakes, St. Lawrence River, GLOS",
+    sensors={
+	sea_surface_height={
+	    standard_name="sea_surface_height",
+	    long_name="Sea Surface Height",
+	    habs_name="Water Level",
+	    featureType="timeSeries",
+	    units="m",
+	    source="platform/14940/14940_water_level_monthly",
+	    keywords="EARTH SCIENCE > OCEANS > SEA SURFACE TOPOGRAPHY  > SEA SURFACE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			return true
+		      end
+	}
+    }
+}
+

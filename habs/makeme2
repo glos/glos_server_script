@@ -1,0 +1,1 @@
+gcc -g test1.c -Wall -I/usr/include/lua5.1 -I/usr/local/include -L/usr/local/lib64 -L/usr/lib/i386-linux-gnu/ -llua5.1 -lnetcdf -o test

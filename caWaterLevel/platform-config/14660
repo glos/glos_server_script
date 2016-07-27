@@ -1,0 +1,24 @@
+Platform={
+    id="14660",
+    title="Morrisburg",
+    lon=-75.191667,
+    lat=44.891667,
+    summary="Tidal Observation at Morrisburg, Chart Datum is 183.200 metres above IGLD 1985, For Real Time Water Levels Call 613-543-3361",
+    keywords="Fisheries and Oceans Canada, Great Lakes, St. Lawrence River, GLOS",
+    sensors={
+	sea_surface_height={
+	    standard_name="sea_surface_height",
+	    long_name="Sea Surface Height",
+	    habs_name="Water Level",
+	    featureType="timeSeries",
+	    units="m",
+	    source="platform/14660/14660_water_level_monthly",
+	    keywords="EARTH SCIENCE > OCEANS > SEA SURFACE TOPOGRAPHY  > SEA SURFACE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			return true
+		      end
+	}
+    }
+}
+

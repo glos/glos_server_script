@@ -1,0 +1,180 @@
+Platform={
+    id="45026",
+    title="U-GLOS Station 45026,Near Cook Nuclear Plant",
+    lon=-86.62,
+    lat=41.98,
+    summary="U-GLOS Station 45026 was designed by the University of Michigan's Ocean Engineering Laboratory (OEL) and deployed in 2011 through a partnership with LimnoTech Inc. This buoy measures wind speed and direction, air and water temperature, relative humidity, wave direction, height and period. The data is logged internally as well as transmitted in ten minute intervals to the internet via cellular modem.",
+    keywords="GLOS,LimnoTech,Cook Nuclear Plant,Lake Michigan",
+    sensors={
+	air_pressure={
+	    standard_name="air_pressure",
+	    long_name="air_pressure",
+	    featureType="timeSeries",
+	    units="Pa",
+	    source="platform/45026/45026_air_press",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC PRESSURE > SEA LEVEL PRESSURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>0 or val<1500 then
+			      return true
+			  else
+			      return false
+			  end			
+		      end
+	},
+	air_temperature={
+	    standard_name="air_temperature",
+	    long_name="air_temperature",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/45026/45026_air_temp",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > AIR TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-100 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	dew_point_temperature={
+	    standard_name="dew_point_temperature",
+	    long_name="dew_point_temperature",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/45026/45026_dew_point_temp",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > DEW POINT TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-100 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="sea water temperature at surface",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/45026/45026_sea_surface_water_temp",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > SEA SURFACE TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="platform/45026/45026_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_wave_significant_height={
+	    standard_name="sea_surface_wave_significant_height",
+	    long_name="sea_surface_wave_significant_height",
+	    featureType="timeSeries",
+	    units="m",
+	    depth=0.0,
+	    source="platform/45026/45026_wave_height",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WAVES > SIGNIFICANT WAVE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_wind_wave_period={
+	    standard_name="sea_surface_wind_wave_period",
+	    long_name="sea_surface_wind_wave_period",
+	    featureType="timeSeries",
+	    units="s",
+	    depth=0.0,
+	    source="platform/45026/45026_wave_period",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WAVES > WAVE FREQUENCY",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_from_direction={
+	    standard_name="wind_from_direction",
+	    long_name="wind_from_direction",
+	    featureType="timeSeries",
+	    units="degree",
+	    source="platform/45026/45026_wind_direction",
+	    depth=-3.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>360 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_speed={
+	    standard_name="wind_speed",
+	    long_name="wind_speed",
+	    featureType="timeSeries",
+	    units="m s-1",
+	    source="platform/45026/45026_wind_speed",
+	    depth=-3.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_speed_of_gust={
+	    standard_name="wind_speed_of_gust",
+	    long_name="wind_speed_of_gust",
+	    featureType="timeSeries",
+	    units="m s-1",
+	    source="platform/45026/45026_wind_gust",
+	    depth=-3.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+

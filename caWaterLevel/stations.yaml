@@ -1,0 +1,171 @@
+url: http://www.waterlevels.gc.ca/eng/Station/Month?type=1&sid=#####&tz=UTC&pres=2&date=????
+stations:
+        - id: 10050
+          name: Thunder Bay
+          lon: -89.217222
+          lat: 48.409444
+
+        - id: 10750
+          name: Michipicoten Harbour
+          lon: -84.898056
+          lat: 47.961667
+
+        - id: 10220
+          name: Rossport
+          lon: -87.519444
+          lat: 48.833611
+
+        - id: 10980
+          name: Sault Ste Marie above/amont
+          lon: -84.367222
+          lat: 46.512222
+
+        - id: 10920
+          name: Gros Cap
+          lon: -84.586111
+          lat: 46.528889
+
+        - id: 11010
+          name: Sault Ste Marie below/aval
+          lon: -84.343056
+          lat: 46.511111
+
+        - id: 11500
+          name: Collingwood
+          lon: -80.22
+          lat: 44.508333
+
+        - id: 11860
+          name: Goderich
+          lon: -81.727778
+          lat: 43.745278
+
+        - id: 11195
+          name: Little Current
+          lon: -86.519722
+          lat: 45.981389
+
+        - id: 11445
+          name: Midland
+          lon: -79.888056
+          lat: 44.752778
+
+        - id: 11375
+          name: Parry Sound
+          lon: -80.035556
+          lat: 45.338333
+
+        - id: 11070
+          name: Thessalon
+          lon: -83.550833
+          lat: 46.253889
+
+        - id: 11690
+          name: Tobermory
+          lon: -81.662778
+          lat: 45.256667
+
+        - id: 11940
+          name: Point Edward
+          lon: -82.421389
+          lat: 42.991111
+
+        - id: 11995
+          name: Amherstburg
+          lon: -83.113611
+          lat: 42.144167
+
+        - id: 11965
+          name: Belle River
+          lon: -82.710833
+          lat: 42.296111
+
+        - id: 11950
+          name: Port Lambton
+          lon: -82.506944
+          lat: 42.657222
+
+        - id: 12005
+          name: Bar Point
+          lon: -83.114722
+          lat: 42.061667
+
+        - id: 12250
+          name: Erieau
+          lon: -81.914444
+          lat: 42.26
+
+        - id: 12065
+          name: Kingsville
+          lon: -82.734722
+          lat: 42.026667
+
+        - id: 12865
+          name: Port Colborne
+          lon: -79.252778
+          lat: 42.874444
+
+        - id: 12710
+          name: Port Dover
+          lon: -80.201389
+          lat: 42.781389
+
+        - id: 12400
+          name: Port Stanley
+          lon: -81.213333
+          lat: 42.658889
+
+        - id: 14400
+          name: Brockville
+          lon: -75.691667
+          lat: 44.585556
+
+        - id: 13150
+          name: Burlington
+          lon: -79.792778
+          lat:  43.299722
+
+        - id: 13590
+          name: Cobourg
+          lon: -78.165
+          lat: 43.957778
+
+        - id: 14870
+          name: Cornwall
+          lon: -74.795278
+          lat: 45.005833
+
+        - id: 14600
+          name: Iroquois above/amont
+          lon: -75.320556
+          lat: 44.822222
+
+        - id: 14602
+          name: Iroquois below/aval
+          lon: -75.310278
+          lat: 44.836667
+
+        - id: 13988
+          name: Kingston (Portsmouth)
+          lon: -76.5175
+          lat: 44.2175
+
+        - id: 14660
+          name: Morrisburg
+          lon: -75.191667
+          lat: 44.891667
+
+        - id: 13030
+          name: Port Weller
+          lon: -79.219444
+          lat: 43.236667
+
+        - id: 14940
+          name: Summerstown
+          lon: -74.554167
+          lat: 45.059722
+
+        - id: 13320
+          name: Toronto
+          lon: -79.380278
+          lat: 43.639722

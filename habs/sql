@@ -1,0 +1,1 @@
+copy (select extract (epoch from m_date) as epoch,m_value from glos_45029 where sensor_id=3970 order by epoch asc) to '45029_air_temp' with CSV;

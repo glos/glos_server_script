@@ -1,0 +1,130 @@
+Platform={
+    id="45164",
+    title="RECON Erie-Cleveland(CLV)",
+    lon=-81.7,
+    lat=41.73,
+    summary="Real-Time Coastal Observation Network(RECON). Real-time coastal research cabled observatory buoy",
+    keywords="GLOS,RECON,GLERL NOAA,Lake Erie",
+    sensors={
+	air_temperature={
+	    standard_name="air_temperature",
+	    long_name="air_temperature",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/45164/45164_air_temp",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > ATMOSPHERE > ATMOSPHERIC TEMPERATURE > AIR TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-100 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="sea water temperature at surface",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/45164/45164_sea_surface_water_temp",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > SEA SURFACE TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_wave_significant_height={
+	    standard_name="sea_surface_wave_significant_height",
+	    long_name="sea_surface_wave_significant_height",
+	    featureType="timeSeries",
+	    units="m",
+	    depth=0.0,
+	    source="platform/45164/45164_wave_height",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WAVES > SIGNIFICANT WAVE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	sea_surface_wind_wave_period={
+	    standard_name="sea_surface_wind_wave_period",
+	    long_name="sea_surface_wind_wave_period",
+	    featureType="timeSeries",
+	    units="s",
+	    depth=0.0,
+	    source="platform/45164/45029_wave_period",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WAVES > WAVE FREQUENCY",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_from_direction={
+	    standard_name="wind_from_direction",
+	    long_name="wind_from_direction",
+	    featureType="timeSeries",
+	    units="degree",
+	    source="platform/45164/45164_wind_direction",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>360 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_speed={
+	    standard_name="wind_speed",
+	    long_name="wind_speed",
+	    featureType="timeSeries",
+	    units="m s-1",
+	    source="platform/45164/45164_wind_speed",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	wind_speed_of_gust={
+	    standard_name="wind_speed_of_gust",
+	    long_name="wind_speed_of_gust",
+	    featureType="timeSeries",
+	    units="m s-1",
+	    source="platform/45164/45164_wind_gust",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+

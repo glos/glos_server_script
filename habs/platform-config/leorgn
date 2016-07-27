@@ -1,0 +1,106 @@
+Platform={
+    id="leorgn",
+    title="Oregon Pump Station",
+    lon=-83.29030,
+    lat=41.67196,
+    summary="",
+    keywords="GLOS,leorgn, Oregon Pump Station",
+    sensors={
+        sea_surface_water_temperature={
+            standard_name="sea_water_temperature",
+            habs_name="water_temperature",
+            short_name="Water Temperature",
+            long_name="Water Temperature",
+            featureType="timeSeries",
+            units="degree_Celsius",
+            source="platform/leorgn/leorgn_sea_surface_water_temperature",
+            depth=0.0,
+            keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > SEA SURFACE TEMPERATURE",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          if val>100 or val<-10 then
+                              return false
+                          else
+                              return true
+                          end
+                      end
+        },
+        ph={
+            standard_name="ph",
+            habs_name="ph",
+	    short_name="pH",
+            long_name="PH",
+            featureType="timeSeries",
+            units="",
+            source="platform/leorgn/leorgn_ph",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > PH",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        },
+	water_conductivity={
+            standard_name="water_conductivity",
+            habs_name="water_conductivity",
+            short_name="Water Conductivity",
+            long_name="Water Conductivity",
+            featureType="timeSeries",
+            units="uS/cm",
+            source="platform/leorgn/leorgn_water_conductivity",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > CONDUCTIVITY",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        },
+	ysi_blue_green_algae={
+            standard_name="ysi_blue_green_algae",
+            habs_name="blue_green_algae",
+            short_name="YSI Blue Green Algae",
+            long_name="YSI Blue Green Algae",
+            featureType="timeSeries",
+            units="rfu",
+            source="platform/leorgn/leorgn_ysi_blue_green_algae",
+            depth=0.0,
+            keywords="EARTH SCIENCE > BIOLOGICAL CLASSIFICATION > PLANTS > MICROALGA",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        },
+	ysi_chlorophyll={
+            standard_name="ysi_chlorophyll",
+            habs_name="chlorophyll",
+            short_name="YSI Chlorophyll",
+            long_name="YSI Chlorophyll",
+            featureType="timeSeries",
+            units="rfu",
+            source="platform/leorgn/leorgn_ysi_chlorophyll",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > CHLOROPHYLL",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        },
+        ysi_turbidity={
+            standard_name="ysi_turbidity",
+            habs_name="turbidity",
+            short_name="YSI Turbidity",
+            long_name="YSI Turbidity",
+            featureType="timeSeries",
+            units="ntu",
+            source="platform/leorgn/leorgn_ysi_turbidity",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > TURBIDITY",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+	              end
+        }
+    }
+}
+
+

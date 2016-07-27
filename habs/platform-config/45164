@@ -1,0 +1,78 @@
+Platform={
+    id="45164",
+    title="RECON Erie-Cleveland(CLV)",
+    lon=-81.7,
+    lat=41.73,
+    summary="Real-Time Coastal Observation Network(RECON). Real-time coastal research cabled observatory buoy",
+    keywords="GLOS,RECON,GLERL NOAA,Lake Erie",
+    sensors={
+	sea_surface_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="sea water temperature at surface",
+	    habs_name="water_temperature",
+	    featureType="timeSeries",
+	    units="degree_Celsius",
+	    source="platform/45164/45164_sea_surface_water_temp",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > SEA SURFACE TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+	dissolved_oxygen={
+            standard_name="dissolved_oxygen",
+            habs_name="Dissolved Oxygen",
+            short_name="Dissolved Oxygen",
+            long_name="Dissolved Oxygen",
+            featureType="timeSeries",
+            units="mg/L",
+            source="platform/45164/45164_dissolved_oxygen",
+            depth=0.0,
+            keywords="OCEANS > OCEAN CHEMISTRY > DISSOLVED GASES > DISSOLVED OXYGEN",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          if val>=0 then
+                              return true
+                          else
+                              return false
+                          end
+                      end
+        },
+        dissolved_oxygen_saturation={
+            standard_name="dissolved_oxygen_saturation",
+            habs_name="Dissolved Oxygen Saturation",
+            short_name="Dissolved Oxygen Saturation",
+            long_name="Dissolved Oxygen Saturation",
+            featureType="timeSeries",
+            units="%",
+            source="platform/45164/45164_dissolved_oxygen_saturation",
+            depth=0.0,
+            keywords="OCEANS > OCEAN CHEMISTRY > DISSOLVED GASES > DISSOLVED OXYGEN SATURATION",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                              return true
+                      end
+        },
+	water_conductivity={
+            standard_name="water_conductivity",
+            habs_name="water_conductivity",
+            short_name="Water Conductivity",
+            long_name="Water Conductivity",
+            featureType="timeSeries",
+            units="uS/cm",
+            source="platform/45164/45164_water_conductivity",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > CONDUCTIVITY",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        }
+    }
+}
+

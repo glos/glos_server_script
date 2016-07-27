@@ -1,0 +1,28 @@
+Platform={
+    id="ESF2",
+    title="Sodus Bay South(ESF2)",
+    lon=-76.94,
+    lat=43.23,
+    summary="Nexsens MB-300; Inland Lake Buoy. Great Lakes Research Consortium and the State University of New York, College of Environmental Science and Forestry",
+    keywords="GLOS,ESF2,Great Lakes Research Consortium and the State University of New York, College of Environmental Science and Forestry,Lake Ontario",
+    sensors={
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="platform/ESF2/ESF2_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+
+    }
+}
+

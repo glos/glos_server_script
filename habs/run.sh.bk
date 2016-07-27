@@ -1,0 +1,22 @@
+#!/bin/bash
+PREFIX=/usr/local/glos
+DIR=habs
+VIRTUALENV_NAME=.pyvirtualenvs/habs
+LOCAL_OUTPUT=${PREFIX}/${DIR}
+REMOTE_BASE=/var/local/glos/storage/HABS/lakes/
+
+source $PREFIX/$VIRTUALENV_NAME/bin/activate
+#export PYTHONPATH=$PYTHONPATH:${LOCAL_OUTPUT}/platform
+echo "Fetch data for the platforms listed under "${LOCAL_OUTPUT}"/platform/"
+python $PREFIX/$DIR/fetchAll.py ${LOCAL_OUTPUT}/platform
+if [ $? -eq 0 ];then
+    for f in ${LOCAL_OUTPUT}/platform-config/*
+    do
+	if [ -f $f ]; then
+	    echo "habs2nc on platform-config/"${f}
+	    ${LOCAL_OUTPUT}/habs2nc $f
+	    #scp $LOCAL_OUTPUT/${f}*.nc $USER@192.168.76.104:$REMOTE_BASE/f/
+	fi
+    done
+fi
+#rm  -f $LOCAL_OUTPUT/*.nc

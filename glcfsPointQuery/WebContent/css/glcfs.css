@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* customize product header and min height needs */
+#head {
+	background: none;
+    background-color: #fff;
+    height: 78px;
+    width: 100%;
+    z-index: 11;
+}
+
+#main {
+    min-height:650px;
+	}
+		
+body, #page{
+    line-height:17px;
+    text-align:left;
+    font-size:14px;
+    font-family:Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+   
+}
+
+p{padding-bottom:10px}
+#footer, #glos_lyrs{font-size:12px; font-family:Helvetica,Arial,sans-serif;}
+
+ui-dialog-content ui-widget-content {
+	border-color: #014e9c;
+    border-left: 1px solid #014e9c;
+    border-right: 1px solid #014e9c;
+    border-style: solid;
+    border-width: 0 1px 1px;
+}

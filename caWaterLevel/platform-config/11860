@@ -1,0 +1,24 @@
+Platform={
+    id="11860",
+    title="Goderich",
+    lon=-81.727778,
+    lat=43.745278,
+    summary="Tidal Observation at Goderich, Chart Datum is 183.200 metres above IGLD 1985, For Real Time Water Levels Call 519-524-8058",
+    keywords="Fisheries and Oceans Canada, Great Lakes, Lake Huron, GLOS",
+    sensors={
+	sea_surface_height={
+	    standard_name="sea_surface_height",
+	    long_name="Sea Surface Height",
+	    habs_name="Water Level",
+	    featureType="timeSeries",
+	    units="m",
+	    source="platform/11860/11860_water_level_monthly",
+	    keywords="EARTH SCIENCE > OCEANS > SEA SURFACE TOPOGRAPHY  > SEA SURFACE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			return true
+		      end
+	}
+    }
+}
+

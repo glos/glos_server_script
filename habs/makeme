@@ -1,0 +1,1 @@
+gcc -g obs2nc.c -Wall -I/usr/local/include -L/usr/local/lib64 -llua -lnetcdf -o habs2nc

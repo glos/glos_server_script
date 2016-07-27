@@ -1,0 +1,24 @@
+Platform={
+    id="12400",
+    title="Port Stanley",
+    lon=-81.213333,
+    lat=42.658889,
+    summary="Tidal Observation at Port Stanley, Chart Datum is 183.200 metres above IGLD 1985, For Real Time Water Levels Call 519-782-3866",
+    keywords="Fisheries and Oceans Canada, Great Lakes, Lake Erie, GLOS",
+    sensors={
+	sea_surface_height={
+	    standard_name="sea_surface_height",
+	    long_name="Sea Surface Height",
+	    habs_name="Water Level",
+	    featureType="timeSeries",
+	    units="m",
+	    source="platform/12400/12400_water_level_monthly",
+	    keywords="EARTH SCIENCE > OCEANS > SEA SURFACE TOPOGRAPHY  > SEA SURFACE HEIGHT",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			return true
+		      end
+	}
+    }
+}
+

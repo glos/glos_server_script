@@ -1,0 +1,44 @@
+Platform={
+    id="ESF6",
+    title="Oneida Lake Buoy (ESF6)",
+    lon=-75.93,
+    lat=43.18,
+    summary="Apprise Buoy; Inland Lake Buoy. Great Lakes Research Consortium and the State University of New York, College of Environmental Science and Forestry",
+    keywords="GLOS,ESF6,Great Lakes Research Consortium and the State University of New York, College of Environmental Science and Forestry,Lake Ontario",
+    sensors={
+	sea_water_temperature={
+	    standard_name="sea_water_temperature",
+	    long_name="Thermistor water temperature",
+	    featureType="timeSeriesProfile",
+	    units="degree_Celsius",
+	    source="platform/ESF6/ESF6_sea_water_temp",
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN TEMPERATURE > WATER TEMPERATURE",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>100 or val<-10 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	},
+        wind_from_direction={
+	    standard_name="wind_from_direction",
+	    long_name="wind_from_direction",
+	    featureType="timeSeries",
+	    units="degree",
+	    source="platform/ESF6/ESF6_wind_direction",
+	    depth=0.0,
+	    keywords="EARTH SCIENCE > OCEANS > OCEAN WINDS > SURFACE WINDS",
+	    keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+	    validator=function(val)
+			  if val>360 or val<0 then
+			      return false
+			  else
+			      return true
+			  end			
+		      end
+	}
+    }
+}
+
