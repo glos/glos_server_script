@@ -87,7 +87,11 @@ def glcfs(castType, logger, ts):
             ldir = _glcfs_forecast_path_fmt
             tfile = _forecast_ftp_timestamp_file
         today = datetime.utcnow()
-        newts = "{0}{1}{2}".format(today.strftime('%Y'), today.strftime('%j'), ts)
+        doy = int(today.strftime('%j'))
+        # This is ugly! DOY actually changed for the last harvest
+        if ts == "18":
+            doy -= 1
+        newts = "{0}{1}{2}".format(today.strftime('%Y'), doy, ts)
         if os.path.exists(tfile):
             with open(tfile, 'r') as f:
                 t = f.readline()[0 : -1]
