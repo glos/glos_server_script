@@ -119,6 +119,12 @@ def hecwfs_process(logger, castType, hourMask):
         logger.error("Failed to convert netcdf to shp: {0}".format(file))
         return ret
     logger.debug("Parse data end")
+    n = datetime.datetime.now()
+    dt = mydate.getDateTimePlus(ymd[0], ymd[1], ymd[2], hour, 0, 0, castLen)
+    os.system(
+        "echo 'HECWFS16988|%s|%d-%02d-%02d %02d:00:00|%d-%02d-%02d %02d:00:00|%d-%02d-%02d %02d:%02d:%02d' | nc 192.168.76.104 16988" % (
+        castType.lower(), ymd[0], ymd[1], ymd[2], hour + 1, dt.year, dt.month, dt.day, dt.hour, n.year, n.month, n.day,
+        n.hour, n.minute, n.second))
     if os.path.exists(_shp_list):
         with open(_shp_list,"r") as shpList:
             shps = shpList.readlines()
