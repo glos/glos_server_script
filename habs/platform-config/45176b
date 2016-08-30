@@ -1,0 +1,55 @@
+Platform={
+    id="45176b",
+    title="Cleveland Crib Lake Bottom",
+    lon=-81.765,
+    lat=41.55,
+    summary="",
+    keywords="GLOS,LimnoTech, Lake Erie",
+    sensors={
+        water_conductivity={
+            standard_name="water_conductivity",
+            habs_name="water_conductivity",
+            short_name="Water Conductivity",
+            long_name="Water Conductivity",
+            featureType="timeSeries",
+            units="uS/cm",
+            source="platform/45176b/45176b_water_conductivity",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > CONDUCTIVITY",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        },
+        ysi_blue_green_algae={
+            standard_name="ysi_blue_green_algae",
+            habs_name="blue_green_algae",
+            short_name="YSI Blue Green Algae",
+            long_name="YSI Blue Green Algae",
+            featureType="timeSeries",
+            units="rfu",
+            source="platform/45176b/45176b_ysi_blue_green_algae",
+            depth=0.0,
+            keywords="EARTH SCIENCE > BIOLOGICAL CLASSIFICATION > PLANTS > MICROALGAE",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        },
+        ysi_chlorophyll={
+            standard_name="ysi_chlorophyll",
+            habs_name="chlorophyll",
+            short_name="YSI Chlorophyll",
+            long_name="YSI Chlorophyll",
+            featureType="timeSeries",
+            units="rfu",
+            source="platform/45176b/45176b_ysi_chlorophyll",
+            depth=0.0,
+            keywords="TERRESTRIAL HYDROSPHERE > WATER QUALITY/WATER CHEMISTRY > CHLOROPHYLL",
+            keywords_vocabulary="GCMD Earth Science Keywords. Version 5.3.3",
+            validator=function(val)
+                          return true
+                      end
+        }
+    }
+}
