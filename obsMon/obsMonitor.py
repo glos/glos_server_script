@@ -119,7 +119,7 @@ def compose(name,lastupdate,freq):
     now=datetime.datetime.utcnow()
     timediff=(now-lastupdate).total_seconds()/60
     #make sure freq is positive
-    template[1]="Buoy {0} might be offline, last report was at: {1} ({2} minutes ago) and has missed {3} reports at frequency of {4} minutes".format(name,ts.astimezone(et), round(timediff,2), round(timediff/10,0),freq/60)
+    template[1]="Buoy {0} might be offline, last report was at: {1} ({2} minutes ago) and has missed {3} report(s) at frequency of {4} minutes".format(name,ts.astimezone(et), round(timediff,2), int(timediff/freq),freq/60)
     return "\n".join(template)
 
 obsList={}
