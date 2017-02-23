@@ -344,7 +344,7 @@ function initPlatformInfo(Platform)
 	    v.vars.platform.attributes.ioos_code="urn:ioos:station:glos:"..Platform.id
 	    v.vars.platform.attributes.long_name=Platform.title
 	    v.vars.platform.value=Platform.title
-	    v.vars.instrument.attributes.long_name="urn:ioos:sensor:cencoos:"..Platform.id..":"..k
+	    v.vars.instrument.attributes.long_name="urn:ioos:sensor:"..Platform.id..":"..k
 	    v.vars.instrument.value=v.vars.instrument.attributes.long_name
 	    --print("*************************")
 	    --vardump(v)
