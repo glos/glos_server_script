@@ -8,4 +8,5 @@
     There should be three files for each lake that have the extensions ".in1", ".out1", and ".out3."
 2. Check 6 hours file at /var/local/glos/storage/GLCFS/Nowcast
 3. Remove 6 hours files from the /Nowcast that fall into the time span of 50 days file based upon the naming convention of the file name
-4. Restart THREDDS server (optional)
+4. Delete cache in tds /var/lib/tomcat/applications/thredds-4.6.6/content/thredds/cache/agg/glos/glcfs/pqt
+5. Restart THREDDS server (optional)
